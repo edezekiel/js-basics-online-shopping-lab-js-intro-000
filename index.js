@@ -41,32 +41,32 @@ function viewCart() {
   }
 }
 
+
 function total() {
   //iterates through the cart array
-
-  let cart_total = 0;
-  for (let i = 0; i < getCart().length; i++) {
-    cart_total += getCart()[i].itemPrice
+  var sum = null;
+  for (var i = 0; i < cart.length; i++) {
+  sum += cart[i].itemPrice
   }
-return cart_total;
+return sum;
   //returns the current total value of the items in the cart
 }
 
-// function total() {
-//   //iterates through the cart array
-//   var adds = null;
-//   for (let i = 0; i < cart.length; i++) {
-//   adds += getCart()[i].itemPrice
-//   }
-//
-// return total;
-//   //returns the current total value of the items in the cart
+// function removeFromCart(item) {
+//   // write your code here
+// if (!cart = item){
+//   return "That item is not in your cart."
 // }
-
-function removeFromCart(item) {
-  // write your code here
-}
+//
+// else {
+// }
+// }
 
 function placeOrder(cardNumber) {
   // write your code here
+  if (!cardNumber){
+    return "Sorry, we don't have a credit card on file for you."
+  } else {
+    `Your total cost is ${total()}, which will be charged to the card ${cardNumber}.`
+  }
 }
